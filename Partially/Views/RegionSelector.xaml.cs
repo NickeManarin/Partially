@@ -11,7 +11,6 @@ public partial class RegionSelector : Window
     private Action<Monitor, Rect> _selected;
     private Action<Monitor> _gotHover;
     private Action _aborted;
-
     private Monitor _monitor;
 
     public RegionSelector()

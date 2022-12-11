@@ -1,9 +1,28 @@
 ﻿<Window x:Class="Partially.Views.Selection"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Partially" Height="450" Width="800" WindowStyle="None" 
+        x:Name="ThisWindow" Title="Partially" Height="450" Width="800" WindowStyle="None" 
         Background="Transparent" AllowsTransparency="True"
         Loaded="Selection_Loaded" Closing="Selection_Closing">
+
+    <Window.TaskbarItemInfo>
+        <TaskbarItemInfo>
+            <TaskbarItemInfo.ThumbButtonInfos>
+                <ThumbButtonInfoCollection>
+                    <ThumbButtonInfo Command="{Binding ElementName=ThisWindow, Path=SelectCommand}" CommandTarget="{Binding ElementName=ThisWindow}" DismissWhenClicked="True" Description="Re-select screen region">
+                        <ThumbButtonInfo.ImageSource>
+                            <DrawingImage>
+                                <DrawingImage.Drawing>
+                                    <GeometryDrawing Brush="White" 
+                                                     Geometry="F1 M 2 11.799999 C 2 10.360001 2.36 9.026667 3.08 7.799999 C 3.8 6.573334 4.773333 5.6 6 4.879999 C 7.226666 4.16 8.559999 3.799999 10 3.799999 C 11.439999 3.799999 12.773333 4.16 14 4.879999 C 15.226665 5.6 16.199999 6.573334 16.92 7.799999 C 17.639999 9.026667 18 10.360001 18 11.799999 C 18 13.24 17.639999 14.573334 16.92 15.799999 C 16.199999 17.026667 15.226665 18 14 18.719999 C 12.773333 19.439999 11.439999 19.799999 10 19.799999 C 8.559999 19.799999 7.226666 19.439999 6 18.719999 C 4.773333 18 3.8 17.026667 3.08 15.799999 C 2.36 14.573334 2 13.24 2 11.799999 Z M 10 16.279999 C 10.826666 16.306665 11.58 16.113333 12.259999 15.699999 C 12.939999 15.286667 13.486666 14.74 13.9 14.059999 C 14.313333 13.379999 14.52 12.626666 14.52 11.799999 C 14.52 10.973333 14.313333 10.219999 13.9 9.54 C 13.486666 8.860001 12.939999 8.313334 12.259999 7.9 C 11.58 7.486667 10.826666 7.28 10 7.28 C 9.173333 7.28 8.42 7.486667 7.74 7.9 C 7.059999 8.313334 6.513333 8.860001 6.1 9.54 C 5.686666 10.219999 5.486667 10.973333 5.5 11.799999 C 5.513333 12.626666 5.72 13.379999 6.12 14.059999 C 6.52 14.74 7.059999 15.286667 7.74 15.699999 C 8.42 16.113333 9.173333 16.32 10 16.32 Z"/>
+                                </DrawingImage.Drawing>
+                            </DrawingImage>
+                        </ThumbButtonInfo.ImageSource>
+                    </ThumbButtonInfo>
+                </ThumbButtonInfoCollection>
+            </TaskbarItemInfo.ThumbButtonInfos>
+        </TaskbarItemInfo>
+    </Window.TaskbarItemInfo>
 
     <Grid>
         

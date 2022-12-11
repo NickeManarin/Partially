@@ -13,6 +13,8 @@ namespace Partially.Views;
 
 public partial class Selection : Window
 {
+    public RoutedUICommand SelectCommand { get; set; } = new();
+    
     /// <summary>
     /// Keyboard and mouse hooks helper.
     /// </summary>
@@ -32,6 +34,12 @@ public partial class Selection : Window
             _actHook.KeyDown += KeyHookTarget;
         }
         catch (Exception) { }
+
+        CommandBindings.Clear();
+        CommandBindings.AddRange(new CommandBindingCollection
+        {
+            new CommandBinding(SelectCommand, async (_, _) => await RequestRegionSelection(), (_, args) => args.CanExecute = true)
+        });
     }
 
     //Transparent window, click through
