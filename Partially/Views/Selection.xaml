@@ -1,0 +1,11 @@
+﻿<Window x:Class="Partially.Views.Selection"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Partially" Height="450" Width="800" WindowStyle="None" 
+        Background="Transparent" AllowsTransparency="True"
+        Loaded="Selection_Loaded" Closing="Selection_Closing">
+
+    <Grid>
+        
+    </Grid>
+</Window>

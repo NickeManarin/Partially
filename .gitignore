@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/Partially
+/Partially/bin/Debug/net7.0-windows
+/Partially/obj
+/Partially.sln.DotSettings.user
+/Partially/Partially.csproj.user
